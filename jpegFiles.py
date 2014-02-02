@@ -8,7 +8,7 @@ def get_files(directory):
         file_list.append({"name":name,"modifiedTime":file_stat.st_mtime})
     return file_list
 
-file_list = get_files("/var/www/motion/*.jpg")
+file_list = get_files("/var/www/motion")
 sorted_file_list = sorted(file_list, key=lambda k: k['modifiedTime'],reverse=True) 
 
 formatted_file_list = []
